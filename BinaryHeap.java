@@ -21,7 +21,6 @@ public class BinaryHeap {
     int current = size - 1;
     int parent = (current - 1) / 2;
 
-    // (parent >= 0 && parent < current) && 
     while ((arr[current] < arr[parent])) {
       swap(current, parent);
       current = parent;
@@ -46,7 +45,7 @@ public class BinaryHeap {
     int smallestChild;
 
     while (!isLeaf(pos)) {
-      smallestChild = pos * 2 + 1;// leftChild(pos);
+      smallestChild = pos * 2 + 1;
 
       if ((smallestChild + 1 < size) && (arr[smallestChild] > arr[smallestChild + 1])) {
         smallestChild = smallestChild + 1;
